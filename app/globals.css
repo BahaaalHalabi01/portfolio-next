@@ -54,6 +54,14 @@
     @apply border-border;
   }
 
+  .banner-p {
+    @apply lg:text-2xl ;
+  }
+
+  .banner-p a {
+    @apply lg:text-3xl text-2xl text-primary font-bold hover:underline mx-1;
+  }
+
   body {
     @apply bg-background text-foreground dark;
   }

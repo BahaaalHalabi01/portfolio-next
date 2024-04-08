@@ -1,6 +1,6 @@
 "use client";
 import { type FC, type PropsWithChildren } from "react";
-import { Variants, motion } from "framer-motion";
+import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const container: Variants = {
@@ -34,48 +34,39 @@ export const AnimatedBanner: FC<PropsWithChildren> = ({ children }) => {
         className="text-primary text-7xl font-bold pb-4"
         {...animateItem}
       >
-        {t('name')}
+        {t("name")}
       </motion.h1>
       <motion.h2
         className="text-foreground text-6xl font-bold pb-4"
         {...animateItem}
       >
-
-        {t('welcome')}
+        {t("welcome")}
       </motion.h2>
       <motion.p
-        className="text-secondary-foreground text-2xl text-balance px-32 leading-10"
+        className="text-secondary-foreground text-balance banner-p"
         {...animateItem}
       >
-        {t("about-0")}
-        <a
-          href="https://www.typescriptlang.org"
-          target="_blank"
-          className="important-link"
-        >
+        {t("about.0")}
+        <a href="https://www.typescriptlang.org" target="_blank">
           Typescript
         </a>
         ,
-        <a className=" important-link" href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank">
           React
         </a>
-        , {t("and")}{" "}
-        <a className="important-link" href="https://nextjs.org" target="_blank">
+        ,{t("and")}
+        <a href="https://nextjs.org" target="_blank">
           NextJs
         </a>
-        {t("about-1")}
-        <a className="important-link" href="https://nodejs.org" target="_blank">
+        {t("about.1")}
+        <a href="https://nodejs.org" target="_blank">
           NodeJs
         </a>
-        {t("about-2")}
-        <a
-          className="important-link"
-          href="https://aws.amazon.com"
-          target="_blank"
-        >
+        {t("about.2")}
+        <a href="https://aws.amazon.com" target="_blank">
           Amazon Web Services
         </a>
-        {t("about-3")}.{t("about-4")}
+        {t("about.3")}.{t("about.4")}
       </motion.p>
     </motion.section>
   );
