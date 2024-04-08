@@ -1,5 +1,4 @@
 "use client";
-
 import { NextIntlClientProvider } from "next-intl";
 import React from "react";
 

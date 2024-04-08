@@ -34,13 +34,14 @@ export const AnimatedBanner: FC<PropsWithChildren> = ({ children }) => {
         className="text-primary text-7xl font-bold pb-4"
         {...animateItem}
       >
-        Bahaa al Halabi
+        {t('name')}
       </motion.h1>
       <motion.h2
         className="text-foreground text-6xl font-bold pb-4"
         {...animateItem}
       >
-        I turn ideas into cool web applications
+
+        {t('welcome')}
       </motion.h2>
       <motion.p
         className="text-secondary-foreground text-2xl text-balance px-32 leading-10"
