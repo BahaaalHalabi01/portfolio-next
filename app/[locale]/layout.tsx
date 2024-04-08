@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+import { BugAnimation } from "./BugAnimation";
 
 export default function LocaleLayout({
   children,
@@ -31,8 +32,8 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <header className=" sticky top-0 z-20 border-b border-secondary ">
-          <nav className="lg:flex items-center justify-between lg:h-16 font-bold text-lg capitalize lg:py-0 py-2 px-24">
+        <header className="sticky top-0 z-20 border-b border-secondary">
+          <nav className="lg:flex items-center justify-between lg:h-16 font-bold text-lg capitalize lg:py-0 py-2 px-24 relative">
             <div className="flex items-center md:gap-x-8 justify-between flex-wrap">
               <span className="flex gap-x-2 lg:gap-x-6">
                 <a className="inline-flex gap-x-2 items-center" href="/">
@@ -63,7 +64,11 @@ export default function LocaleLayout({
 
             <div className="flex flex-row lg:gap-x-12 items-center lg:py-0 py-2 text-sm lg:text-base justify-between lg:w-fit w-full text-muted-foreground">
               {headers.map((h) => (
-                <Link key={h.label} href={h.href} className="hover:underline hover:text-secondary-foreground">
+                <Link
+                  key={h.label}
+                  href={h.href}
+                  className="hover:underline hover:text-secondary-foreground"
+                >
                   {h.label}
                 </Link>
               ))}
@@ -76,6 +81,8 @@ export default function LocaleLayout({
                 {t("resume")}
               </Link>
             </div>
+
+            <BugAnimation />
           </nav>
         </header>
 
