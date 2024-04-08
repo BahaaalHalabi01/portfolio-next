@@ -1,5 +1,13 @@
 {
   "Index": {
     "title": "Hello world!"
+  },
+  "Header": {
+    "name": "Bahaa al Halabi",
+    "resume": "Get my Resume!",
+    "about": "about",
+    "experience": "experience",
+    "skills": "skills",
+    "contact": "contact"
   }
 }
