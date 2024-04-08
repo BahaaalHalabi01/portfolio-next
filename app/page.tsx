@@ -1,10 +1,8 @@
-import Image from "next/image";
-import { AnimatedSection } from "./animated-section";
+import {redirect} from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-24 container">
-      <AnimatedSection></AnimatedSection>
-    </main>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }
+
+
