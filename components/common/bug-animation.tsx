@@ -12,7 +12,7 @@ const container: Variants = {
     transition: {
       repeatType: "mirror",
       repeat: Infinity,
-      duration: 14,
+      duration: 24,
       
     },
   },

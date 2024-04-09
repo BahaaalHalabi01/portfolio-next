@@ -8,8 +8,8 @@ const container: Variants = {
   show: {
     opacity: 1,
     transition: {
-      duration: 3,
-      staggerChildren: 0.5,
+      duration: 6,
+      staggerChildren: 1,
     },
   },
 };
@@ -21,7 +21,7 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export const AnimatedBanner: FC<PropsWithChildren> = ({ children }) => {
+export constTechStack: FC<PropsWithChildren> = ({ children }) => {
   const t = useTranslations("Home");
   return (
     <motion.section
@@ -30,31 +30,29 @@ export const AnimatedBanner: FC<PropsWithChildren> = ({ children }) => {
       initial="hidden"
       animate="show"
     >
-      <motion.h1
-        className="text-primary text-7xl font-bold pb-4"
-        {...animateItem}
-      >
-        {t("name")}
-      </motion.h1>
-      <motion.h2
-        className="text-foreground text-6xl font-bold pb-4"
-        {...animateItem}
-      >
-        {t("welcome")}
-      </motion.h2>
+      <div className="font-bold" id="about">
+        <motion.h1 className="text-9xl pb-2" {...animateItem}>
+          {t("name")}
+        </motion.h1>
+        <motion.h2
+          className="text-7xl text-primary text-balance pb-4"
+          {...animateItem}
+        >
+          {t("welcome-1")}
+        </motion.h2>
+        <motion.h3 className="text-7xl leading-tight" {...animateItem}>
+          {t("welcome")}
+        </motion.h3>
+      </div>
       <motion.p
-        className="text-secondary-foreground text-balance banner-p"
+        className="text-balance banner-p pt-12"
         {...animateItem}
       >
         {t("about.0")}
         <a href="https://www.typescriptlang.org" target="_blank">
           Typescript
         </a>
-        ,
-        <a href="https://react.dev" target="_blank">
-          React
-        </a>
-        ,{t("and")}
+        ,{t("with")}
         <a href="https://nextjs.org" target="_blank">
           NextJs
         </a>
@@ -70,4 +68,4 @@ export const AnimatedBanner: FC<PropsWithChildren> = ({ children }) => {
       </motion.p>
     </motion.section>
   );
-};
+}

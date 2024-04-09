@@ -54,15 +54,22 @@
     @apply border-border;
   }
 
+  .green-background {
+    background-image: url("/bg-green.jpg");
+
+    @apply inset-0 -z-10 absolute w-screen -translate-x-1/2 left-1/2 opacity-50 ;
+  }
   .banner-p {
-    @apply lg:text-2xl ;
+    @apply lg:text-4xl !leading-normal;
   }
 
   .banner-p a {
-    @apply lg:text-3xl text-2xl text-primary font-bold hover:underline mx-1;
+    @apply lg:text-4xl text-3xl text-primary font-bold hover:underline mx-2 italic;
   }
 
   body {
-    @apply bg-background text-foreground dark;
+    background-color: hsl(var(--background));
+
+    @apply text-foreground dark;
   }
 }

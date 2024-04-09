@@ -21,9 +21,10 @@
       "resume": "get my resume!",
       "resume-re": "my resume!"
     },
-    "welcome": "I turn ideas into cool web applications",
+    "welcome": "Turning ideas into cool web applications",
+    "welcome-1":"A Middle Full Stack Web Developer",
     "about": {
-      "0": "I am a senior full stack web developer. I mainly use ",
+      "0": "I mainly use",
       "1": "to build my frontend apps, and",
       "2": "with various",
       "3": "for the backend",

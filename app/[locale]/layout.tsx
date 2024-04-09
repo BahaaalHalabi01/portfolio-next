@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Noto_Serif } from "next/font/google";
 import { BugPlay } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { locales } from "@/config";
@@ -18,7 +18,7 @@ import { Metadata } from "next";
 import { Providers } from "@/components/providers/providers";
 import { BugAnimation } from "@/components/common/bug-animation";
 
-const inter = Inter({ subsets: ["latin"] });
+const noto = Noto_Serif({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -44,9 +44,9 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <header className="sticky top-0 z-20 border-b border-secondary">
-          <nav className="lg:flex items-center justify-between lg:h-16 font-bold text-lg capitalize lg:py-0 py-2 px-24 relative">
+      <body className={noto.className}>
+        <header className="sticky top-0 z-20 border-b border-secondary text-lg bg-background">
+          <nav className="lg:flex items-center justify-between lg:h-16 font-bold capitalize lg:py-0 py-2 px-24 relative">
             <div className="flex items-center md:gap-x-8 justify-between flex-wrap">
               <span className="flex gap-x-2 lg:gap-x-6">
                 <a className="inline-flex gap-x-2 items-center" href="/">
@@ -54,7 +54,7 @@ export default function LocaleLayout({
                   {t("name")}
                 </a>
                 <Select>
-                  <SelectTrigger className="max-w-fit">
+                  <SelectTrigger className="w-20">
                     <SelectValue placeholder="EN" />
                   </SelectTrigger>
                   <SelectContent>
@@ -75,7 +75,7 @@ export default function LocaleLayout({
               </a>
             </div>
 
-            <div className="flex flex-row lg:gap-x-12 items-center lg:py-0 py-2 text-sm lg:text-base justify-between lg:w-fit w-full text-muted-foreground">
+            <div className="flex flex-row lg:gap-x-12 items-center lg:py-0 py-2  justify-between lg:w-fit w-full text-muted-foreground">
               {headers.map((h) => (
                 <Link
                   key={h.label}
@@ -87,7 +87,7 @@ export default function LocaleLayout({
               ))}
 
               <Link
-                className="border-green-600 border-2 p-2 hidden lg:block hover:underline hover:text-secondary-foreground"
+                className="border-green-600 border-2 py-1 px-3 hidden lg:block hover:underline hover:text-secondary-foreground"
                 href="/Bahaa_al_Halabi.pdf"
                 download={"Bahaa_al_Halabi.pdf"}
               >
@@ -98,8 +98,11 @@ export default function LocaleLayout({
             <BugAnimation />
           </nav>
         </header>
-
         <Providers locale={locale}>{children}</Providers>
+        Image by{" "}
+        <a href="https://www.freepik.com/free-vector/pixel-rain-abstract-background_6148360.htm#page=2&query=programming%20background&position=47&from_view=keyword&track=ais&uuid=63155865-b613-4392-a591-eaa3a13886a1">
+          Freepik
+        </a>
       </body>
     </html>
   );

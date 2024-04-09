@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontSize:{
+        "8xl":"84px",
+        "9xl":"96px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

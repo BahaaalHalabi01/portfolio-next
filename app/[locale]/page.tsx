@@ -1,10 +1,12 @@
-import { AnimatedBanner } from "@/components/common/animated-banner";
+import { TechStack } from "@/components/common/animated-techstack";
+import { Banner } from "@/components/common/banner";
 import { getTranslations } from "next-intl/server";
 
 export default function Index() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-24 container">
-      <AnimatedBanner />
+    <main className="flex min-h-screen flex-col items-center justify-between container">
+      <Banner />
+      <TechStack />
     </main>
   );
 }
