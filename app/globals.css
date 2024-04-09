@@ -72,4 +72,9 @@
 
     @apply text-foreground dark;
   }
+
+  strong {
+    @apply text-primary underline capitalize;
+
+  }
 }
