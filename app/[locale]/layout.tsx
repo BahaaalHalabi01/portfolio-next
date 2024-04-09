@@ -13,10 +13,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
-import { BugAnimation } from "./BugAnimation";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 import { Providers } from "@/components/providers/providers";
+import { BugAnimation } from "@/components/common/bug-animation";
 
 const inter = Inter({ subsets: ["latin"] });
 

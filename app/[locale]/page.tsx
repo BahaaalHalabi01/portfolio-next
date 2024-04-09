@@ -1,5 +1,5 @@
+import { AnimatedBanner } from "@/components/common/animated-banner";
 import { getTranslations } from "next-intl/server";
-import { AnimatedBanner } from "../animated-banner";
 
 export default function Index() {
   return (
