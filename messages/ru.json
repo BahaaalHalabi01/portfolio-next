@@ -2,6 +2,9 @@
   "Metadata": {
     "title": "Bahaa al Halabi Portfolio"
   },
+  "TechStack":{
+    "title":"My Tech Stack"
+  },
   "Home": {
     "name": "Bahaa al Halabi",
     "contact-title": "Contact Me!",
@@ -22,7 +25,7 @@
       "resume-re": "my resume!"
     },
     "welcome": "Turning ideas into cool web applications",
-    "welcome-1":"A Middle Full Stack Web Developer",
+    "welcome-1": "A Middle Full Stack Web Developer",
     "about": {
       "intro": "I like types (no raw <strong>Javascript</strong> please). <strong>NextJs</strong> is the best way to build a modern-web app. <strong>Sveltekit</strong> is very interesting. I love <strong>TailwindCSS</strong>. Did i say that i use <strong>Neovim</strong> by the way.",
       "0": "I mainly use",
