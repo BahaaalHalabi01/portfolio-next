@@ -1,5 +1,5 @@
 "use client";
-import { type FC, type PropsWithChildren } from "react";
+import { type FC } from "react";
 import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -21,18 +21,18 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export const Banner: FC<PropsWithChildren> = ({ children }) => {
+export const Banner: FC = ({}) => {
   const t = useTranslations("Home");
 
   return (
     <motion.section
-      className="text-center py-10 relative h-banner"
+      className="text-start py-10 relative h-banner"
       variants={container}
       initial="hidden"
       animate="show"
     >
       <div className="green-background" aria-description="image wrapper"></div>
-      <div className="font-bold pt-24" id="about">
+      <div className="font-bold pt-10" id="about">
         <motion.h1 className="text-9xl pb-2" {...animateItem}>
           {t("name")}
         </motion.h1>

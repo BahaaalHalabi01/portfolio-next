@@ -1,7 +1,8 @@
 "use client";
-import { type FC, type PropsWithChildren } from "react";
+import { type FC } from "react";
 import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { SkillCircle } from "./skill-circle";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -25,14 +26,15 @@ export const TechStack: FC = ({}) => {
   const t = useTranslations("TechStack");
   return (
     <motion.section
-      className="text-center py-10"
+      className="text-start py-10 w-full"
       variants={container}
       initial="hidden"
       animate="show"
     >
-      <motion.h1 className="text-9xl pb-2" {...animateItem}>
+      <motion.h1 className="text-7xl pb-2" {...animateItem}>
         {t("title")}
       </motion.h1>
+      <SkillCircle />
     </motion.section>
   );
 };

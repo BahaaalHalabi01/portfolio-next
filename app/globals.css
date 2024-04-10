@@ -57,7 +57,7 @@
   .green-background {
     background-image: url("/bg-green.jpg");
 
-    @apply inset-0 -z-10 absolute w-screen -translate-x-1/2 left-1/2 opacity-50 ;
+    @apply inset-0 -z-10 absolute w-screen -translate-x-1/2 left-1/2 opacity-60;
   }
   .banner-p {
     @apply lg:text-4xl !leading-normal;
@@ -74,7 +74,53 @@
   }
 
   strong {
-    @apply text-primary underline capitalize;
+    @apply text-primary capitalize;
+  }
 
+  .circle {
+    @apply w-[480px] aspect-square rounded-full bg-primary overflow-hidden list-none p-0 relative;
+  }
+
+  .circle li:after {
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    width: 70%;
+    height: 70%;
+    transform-origin: 0% 100%;
+    border-bottom: solid black 1px;
+  }
+
+  .circle .text {
+    @apply -mx-1.5 absolute;
+  }
+
+  .circle li:first-child:after {
+    transform: rotate(0deg) skewY(30deg) translate(5px);
+  }
+
+  .circle li:first-child .text {
+    top: 25%;
+    left: 75%;
+  }
+
+  .circle li:nth-child(2):after {
+    transform: rotate(120deg) skewY(30deg) translate(5px);
+  }
+
+  .circle li:nth-child(2) .text {
+    top: 70%;
+    left: 50%;
+  }
+
+  .circle li:nth-child(3):after {
+    transform: rotate(240deg) skewY(30deg) translate(5px);
+  }
+
+  .circle li:nth-child(3) .text {
+    top: 25%;
+    left: 25%;
   }
 }
