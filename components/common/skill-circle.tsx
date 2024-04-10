@@ -17,7 +17,7 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state }) => {
     animate(
       scope.current,
       {
-        rotate: [0, 360],
+        rotate: [0, 720],
       },
       {
         duration: 2,

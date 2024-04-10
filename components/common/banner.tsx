@@ -29,7 +29,8 @@ export const Banner: FC = ({}) => {
       className="text-start py-10 relative h-banner"
       variants={container}
       initial="hidden"
-      animate="show"
+      viewport={{once:true}}
+      whileInView="show"
     >
       <div className="green-background" aria-description="image wrapper"></div>
       <div className="font-bold pt-10" id="about">

@@ -20,26 +20,25 @@ const item: Variants = {
   show: { opacity: 1 },
 };
 
-const animateItem = { /* variants: item  */};
+const animateItem = { variants: item };
 
 export const TechStack: FC = ({}) => {
-
   const t = useTranslations("TechStack");
 
-  const state = useState("frontend")
-
+  const state = useState("frontend");
 
   return (
     <motion.section
-      className="text-start py-10 w-full"
-      // variants={container}
-      // initial="hidden"
-      // animate="show"
+      className="text-start pt-10 w-full opacity-0 min-h-screen"
+      variants={container}
+      initial="hidden"
+      viewport={{ once: true }}
+      whileInView="show"
     >
       <motion.h1 className="text-7xl lg:pb-16 pb-8" {...animateItem}>
         {t("title")}
       </motion.h1>
-      <SkillCircle state={state}/>
+      <SkillCircle state={state} />
     </motion.section>
   );
 };
