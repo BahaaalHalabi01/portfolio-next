@@ -26,13 +26,13 @@ export const Banner: FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <motion.section
-      className="text-center pb-20 pt-10 relative"
+      className="text-center py-10 relative h-banner"
       variants={container}
       initial="hidden"
       animate="show"
     >
       <div className="green-background" aria-description="image wrapper"></div>
-      <div className="font-bold" id="about">
+      <div className="font-bold pt-24" id="about">
         <motion.h1 className="text-9xl pb-2" {...animateItem}>
           {t("name")}
         </motion.h1>

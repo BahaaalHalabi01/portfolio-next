@@ -22,6 +22,9 @@ const config = {
         "8xl":"84px",
         "9xl":"96px",
       },
+      height:{
+        banner:'calc(100vh - 4rem)'
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

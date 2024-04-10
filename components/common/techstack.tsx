@@ -21,51 +21,18 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export constTechStack: FC<PropsWithChildren> = ({ children }) => {
-  const t = useTranslations("Home");
+export const TechStack: FC = ({}) => {
+  const t = useTranslations("TechStack");
   return (
     <motion.section
-      className="text-center"
+      className="text-center py-10"
       variants={container}
       initial="hidden"
       animate="show"
     >
-      <div className="font-bold" id="about">
-        <motion.h1 className="text-9xl pb-2" {...animateItem}>
-          {t("name")}
-        </motion.h1>
-        <motion.h2
-          className="text-7xl text-primary text-balance pb-4"
-          {...animateItem}
-        >
-          {t("welcome-1")}
-        </motion.h2>
-        <motion.h3 className="text-7xl leading-tight" {...animateItem}>
-          {t("welcome")}
-        </motion.h3>
-      </div>
-      <motion.p
-        className="text-balance banner-p pt-12"
-        {...animateItem}
-      >
-        {t("about.0")}
-        <a href="https://www.typescriptlang.org" target="_blank">
-          Typescript
-        </a>
-        ,{t("with")}
-        <a href="https://nextjs.org" target="_blank">
-          NextJs
-        </a>
-        {t("about.1")}
-        <a href="https://nodejs.org" target="_blank">
-          NodeJs
-        </a>
-        {t("about.2")}
-        <a href="https://aws.amazon.com" target="_blank">
-          Amazon Web Services
-        </a>
-        {t("about.3")}.{t("about.4")}
-      </motion.p>
+      <motion.h1 className="text-9xl pb-2" {...animateItem}>
+        {t("title")}
+      </motion.h1>
     </motion.section>
   );
-}
+};
