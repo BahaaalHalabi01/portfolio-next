@@ -100,7 +100,7 @@ export default function LocaleLayout({
           </nav>
         </header>
         <Providers locale={locale}>{children}</Providers>
-        <div className="lg:fixed lg:flex hidden top-full -translate-y-full 2xl:left-[8%] left-[4%] flex-col gap-y-8 justify-between w-full pb-24 max-w-fit">
+        <div className="lg:fixed lg:flex hidden top-full -translate-y-full 2xl:left-[6%] left-[4%] flex-col gap-y-8 justify-between w-full pb-24 max-w-fit">
           <Social />
         </div>
         Image by{" "}

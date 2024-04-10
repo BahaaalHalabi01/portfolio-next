@@ -78,7 +78,7 @@
   }
 
   .circle {
-    @apply w-[480px] aspect-square rounded-full bg-primary overflow-hidden list-none p-0 relative;
+    @apply min-w-[480px] aspect-square rounded-full bg-primary/80 overflow-hidden list-none p-0 relative shadow shadow-primary;
   }
 
   .circle li:after {
@@ -128,5 +128,9 @@
     right: 66%;
 
     @apply text-2xl font-bold flex items-center justify-center;
+  }
+
+  .skill li {
+    @apply border border-secondary text-2xl inline-block text-center justify-center p-4;
   }
 }

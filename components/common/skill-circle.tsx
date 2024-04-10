@@ -6,13 +6,17 @@ import { Dispatch, FC, MouseEvent, SetStateAction } from "react";
 
 interface SkillCircleProps {
   state: [string, Dispatch<SetStateAction<string>>];
+  loading: [boolean, Dispatch<SetStateAction<boolean>>];
 }
 
-export const SkillCircle: FC<SkillCircleProps> = ({ state }) => {
+export const SkillCircle: FC<SkillCircleProps> = ({ state ,loading}) => {
+  const [load,setLoad] = loading
   const [clicked, setClicked] = state;
   const [scope, animate] = useAnimate();
 
   function handleClick(event: MouseEvent<HTMLButtonElement>) {
+
+    setLoad(true)
     setClicked(event.currentTarget.id);
     animate(
       scope.current,
@@ -21,13 +25,14 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state }) => {
       },
       {
         duration: 2,
-        ease:"backInOut"
+        ease: "backInOut",
+        onComplete:()=>setLoad(false)
       },
     );
   }
 
   return (
-    <ul ref={scope} className={cn("circle")}>
+    <ul ref={scope} className={"circle"}>
       <li>
         <button
           className={cn(

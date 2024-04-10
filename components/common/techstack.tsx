@@ -3,6 +3,7 @@ import { useState, type FC } from "react";
 import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SkillCircle } from "./skill-circle";
+import { Skills } from "./skills";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -26,10 +27,11 @@ export const TechStack: FC = ({}) => {
   const t = useTranslations("TechStack");
 
   const state = useState("frontend");
+  const loading = useState(false)
 
   return (
     <motion.section
-      className="text-start pt-10 w-full opacity-0 min-h-screen"
+      className="text-start pt-24 w-full opacity-0 min-h-screen"
       variants={container}
       initial="hidden"
       viewport={{ once: true }}
@@ -38,7 +40,10 @@ export const TechStack: FC = ({}) => {
       <motion.h1 className="text-7xl lg:pb-16 pb-8" {...animateItem}>
         {t("title")}
       </motion.h1>
-      <SkillCircle state={state} />
+      <motion.div className="flex gap-x-8">
+        <SkillCircle state={state} loading={loading}/>
+        <Skills type={state[0]} loading={loading[0]}/>
+      </motion.div>
     </motion.section>
   );
 };
