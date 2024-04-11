@@ -131,6 +131,6 @@
   }
 
   .skill li {
-    @apply border border-secondary text-2xl inline-block text-center justify-center p-4;
+    @apply border border-secondary text-2xl inline-block text-center px-4 py-6 rounded-xl hover:scale-110 transition-transform cursor-pointer min-w-28;
   }
 }

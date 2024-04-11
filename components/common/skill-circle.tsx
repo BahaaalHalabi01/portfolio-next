@@ -1,23 +1,23 @@
 "use client";
 
+import { SkillKeys } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { motion, useAnimate } from "framer-motion";
+import { useAnimate } from "framer-motion";
 import { Dispatch, FC, MouseEvent, SetStateAction } from "react";
 
 interface SkillCircleProps {
-  state: [string, Dispatch<SetStateAction<string>>];
+  state: [SkillKeys, Dispatch<SetStateAction<SkillKeys>>];
   loading: [boolean, Dispatch<SetStateAction<boolean>>];
 }
 
-export const SkillCircle: FC<SkillCircleProps> = ({ state ,loading}) => {
-  const [load,setLoad] = loading
+export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
+  const [_, setLoad] = loading;
   const [clicked, setClicked] = state;
   const [scope, animate] = useAnimate();
 
   function handleClick(event: MouseEvent<HTMLButtonElement>) {
-
-    setLoad(true)
-    setClicked(event.currentTarget.id);
+    setLoad(true);
+    setClicked(event.currentTarget.id as SkillKeys);
     animate(
       scope.current,
       {
@@ -26,7 +26,7 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state ,loading}) => {
       {
         duration: 2,
         ease: "backInOut",
-        onComplete:()=>setLoad(false)
+        onComplete: () => setLoad(false),
       },
     );
   }

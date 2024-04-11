@@ -4,6 +4,7 @@ import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SkillCircle } from "./skill-circle";
 import { Skills } from "./skills";
+import { SkillKeys } from "@/lib/types";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -23,11 +24,14 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export const TechStack: FC = ({}) => {
+
+export const TechStack: FC<{
+  skills: Record<SkillKeys, string[]>;
+}> = ({ skills }) => {
   const t = useTranslations("TechStack");
 
-  const state = useState("frontend");
-  const loading = useState(false)
+  const state = useState<keyof typeof skills>("frontend");
+  const loading = useState(false);
 
   return (
     <motion.section
@@ -41,8 +45,12 @@ export const TechStack: FC = ({}) => {
         {t("title")}
       </motion.h1>
       <motion.div className="flex gap-x-8">
-        <SkillCircle state={state} loading={loading}/>
-        <Skills type={state[0]} loading={loading[0]}/>
+        <SkillCircle state={state} loading={loading} />
+        <Skills
+          type={state[0]}
+          loading={loading[0]}
+          skills={skills[state[0]]}
+        />
       </motion.div>
     </motion.section>
   );
