@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
 import { locales } from "./config";
-import { getDefaultTranslationValues } from "./components/providers/intl-provider";
+import { getDefaultTranslationValues } from "./lib/rich-translations";
 
 export default getRequestConfig(async ({ locale }: { locale: string }) => {
   // Validate that the incoming `locale` parameter is valid
@@ -18,3 +18,5 @@ export default getRequestConfig(async ({ locale }: { locale: string }) => {
     defaultTranslationValues: getDefaultTranslationValues(),
   };
 });
+
+

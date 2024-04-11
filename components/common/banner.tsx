@@ -25,7 +25,7 @@ export function Banner() {
 
   return (
     <motion.section
-      className="text-start py-6 lg:py-14 relative h-section min-h-fit space-y-3"
+      className="text-start py-6 lg:py-14 relative min-h-section space-y-3 w-full"
       variants={container}
       initial="hidden"
       viewport={{ once: true }}

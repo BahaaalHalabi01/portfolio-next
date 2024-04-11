@@ -1,24 +1,28 @@
 "use client";
-
-import { SkillKeys } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import type {
+  Dispatch,
+  MouseEvent,
+  ReactNode,
+  SetStateAction,
+} from "react";
 import { useAnimate } from "framer-motion";
-import { Dispatch, FC, MouseEvent, SetStateAction } from "react";
+import { type SkillKeys } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 interface SkillCircleProps {
   state: [SkillKeys, Dispatch<SetStateAction<SkillKeys>>];
   loading: [boolean, Dispatch<SetStateAction<boolean>>];
 }
 
-export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
+export function SkillCircle({ state, loading }: SkillCircleProps): ReactNode {
   const [_, setLoad] = loading;
   const [clicked, setClicked] = state;
   const [scope, animate] = useAnimate();
 
-  function handleClick(event: MouseEvent<HTMLButtonElement>) {
+  function handleClick(event: MouseEvent<HTMLButtonElement>):void {
     setLoad(true);
     setClicked(event.currentTarget.id as SkillKeys);
-    animate(
+    void animate(
       scope.current,
       {
         rotate: [0, 720],
@@ -26,16 +30,19 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
       {
         duration: 2,
         ease: "backInOut",
-        onComplete: () => setLoad(false),
+        onComplete: () => {
+          setLoad(false);
+        },
       },
     );
   }
 
   return (
     <div className="">
-      <ul ref={scope} className={"circle"}>
+      <ul ref={scope} className="circle">
         <li>
           <button
+            type="button"
             className={cn(
               "text",
               clicked === "frontend" && "scale-150 italic text-secondary",
@@ -48,6 +55,7 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
         </li>
         <li>
           <button
+            type="button"
             className={cn(
               "text",
               clicked === "backend" && "scale-150 italic text-secondary",
@@ -60,6 +68,7 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
         </li>
         <li>
           <button
+            type="button"
             className={cn(
               "text",
               clicked === "tooling" && "scale-150 italic text-secondary ",
@@ -73,4 +82,4 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
       </ul>
     </div>
   );
-};
+}

@@ -14,7 +14,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@Ui/select";
 import { Providers } from "@/components/providers/providers";
 import { BugAnimation } from "@/components/common/bug-animation";
 import { Social } from "@/components/common/social";

@@ -1,4 +1,4 @@
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@Ui/skeleton";
 import { FC } from "react";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +8,7 @@ interface SkillsProps {
   skills: string[];
 }
 
-export const Skills: FC<SkillsProps> = ({ type, loading, skills }) => {
+export const Skills: FC<SkillsProps> = ({ loading, skills }) => {
   if (loading) {
     return (
       <div className="space-x-6 space-y-6 px-8 my-auto">
