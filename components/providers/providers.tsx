@@ -1,19 +1,16 @@
-import { FC, PropsWithChildren } from "react";
-import { IntlProvider } from "./intl-provider";
+import type { PropsWithChildren, ReactNode } from "react";
 import { useMessages, useTimeZone } from "next-intl";
+import { IntlProvider } from "./intl-provider";
 
-export const Providers: FC<PropsWithChildren<{ locale: string }>> = async ({
+export function Providers({
   children,
   locale,
-}) => {
+}: PropsWithChildren<{ locale: string }>): ReactNode {
   const messages = useMessages();
   const timeZone = useTimeZone();
   return (
-    <>
-      <IntlProvider locale={locale} messages={messages} timeZone={timeZone}>
-        {" "}
-        {children}
-      </IntlProvider>
-    </>
+    <IntlProvider locale={locale} messages={messages} timeZone={timeZone}>
+      {children}
+    </IntlProvider>
   );
-};
+}

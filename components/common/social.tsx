@@ -1,6 +1,8 @@
-"use client"
+"use client";
 import { AtSign, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-export function Social() {
+import type { ReactNode } from "react";
+
+export function Social(): ReactNode {
   const comingSoon = () => {
     alert("My apologies,I do not have those social media yet!");
   };
@@ -11,14 +13,14 @@ export function Social() {
         href="https://github.com/BahaaalHalabi01"
         className="hover:scale-125 transition-transform duration-300 ease-out"
         target="_blank"
-        rel="author"
+        rel="author noreferrer"
       >
         <Github />
       </a>
       <a
         href="https://www.linkedin.com/in/bahaa-al-halabi-78066a1a1"
         target="_blank"
-        rel="author"
+        rel="author noreferrer"
         className="hover:scale-125 transition-transform duration-300 ease-out"
       >
         <Linkedin />
@@ -27,7 +29,7 @@ export function Social() {
         className="hover:scale-125 transition-transform duration-300 ease-out"
         href="https://t.me/bahaaalhalabi01"
         target="_blank"
-        rel="author"
+        rel="author noreferrer"
       >
         <svg
           width="24px"
