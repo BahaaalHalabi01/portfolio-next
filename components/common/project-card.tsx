@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import type { ReactNode } from "react";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -8,8 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@Ui/card";
-
-import { Button } from "@Ui/button";
+import { buttonVariants } from "@Ui/button";
 
 export function ProjectCard({
   id,
@@ -21,7 +22,7 @@ export function ProjectCard({
   description: string;
   img: string;
   id: string;
-}) {
+}): ReactNode {
   return (
     <Card>
       <CardHeader>
@@ -29,10 +30,15 @@ export function ProjectCard({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <Image src="" height={80} width={80} alt={title} />
+        <Image src={img} height={240} width={240} alt={title} />
       </CardContent>
-      <CardFooter>
-        <Button />
+      <CardFooter className="">
+        <Link
+          className={buttonVariants({ variant: "default" })}
+          href={`/project/${id}`}
+        >
+          Learn More
+        </Link>
       </CardFooter>
     </Card>
   );
