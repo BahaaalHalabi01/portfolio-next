@@ -1,5 +1,4 @@
 "use client";
-import { type FC } from "react";
 import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -21,7 +20,7 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export const Banner: FC = ({}) => {
+export function Banner() {
   const t = useTranslations("Home");
 
   return (
@@ -54,28 +53,8 @@ export const Banner: FC = ({}) => {
         className="text-balance banner-p pt-12 font-semibold"
         {...animateItem}
       >
-        {t.rich("about.intro", {
-          strong: (chunks) => <strong>{chunks}</strong>,
-        })}
+        {t.rich("about.intro")}
       </motion.p>
     </motion.section>
   );
-};
-// {t("about.0")}
-//          <a href="https://www.typescriptlang.org" target="_blank">
-//            Typescript
-//          </a>
-//          ,{t("with")}
-//          <a href="https://nextjs.org" target="_blank">
-//            NextJs
-//          </a>
-//          {t("about.1")}
-//          <a href="https://nodejs.org" target="_blank">
-//            NodeJs
-//          </a>
-//          {t("about.2")}
-//          <a href="https://aws.amazon.com" target="_blank">
-//            Amazon Web Services
-//          </a>
-//          {t("about.3")}.{t("about.4")}
-//
+}
