@@ -34,16 +34,16 @@ export const TechStack: FC<{
 
   return (
     <motion.section
-      className="text-start pt-16 w-full opacity-0 h-section min-h-fit"
+      className="text-start py-6 lg:py-14 relative h-section min-h-fit"
       variants={container}
       initial="hidden"
       viewport={{ once: true }}
       whileInView="show"
     >
-      <motion.h1 className="text-7xl lg:pb-16 pb-8" {...animateItem}>
+      <motion.h1 className="text-9xl lg:pb-16 pb-8" {...animateItem}>
         {t("title")}
       </motion.h1>
-      <motion.div className="flex gap-x-8 lg:pb-16 pb-8">
+      <motion.div className="lg:gap-x-8 lg:pb-16 pb-8 max-h-fit grid grid-cols-1 place-items-center lg:grid-cols-2">
         <SkillCircle state={state} loading={loading} />
         <Skills
           type={state[0]}

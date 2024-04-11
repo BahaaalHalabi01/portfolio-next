@@ -32,43 +32,45 @@ export const SkillCircle: FC<SkillCircleProps> = ({ state, loading }) => {
   }
 
   return (
-    <ul ref={scope} className={"circle"}>
-      <li>
-        <button
-          className={cn(
-            "text",
-            clicked === "frontend" && "scale-150 italic text-secondary",
-          )}
-          id="frontend"
-          onClick={handleClick}
-        >
-          Frontend
-        </button>
-      </li>
-      <li>
-        <button
-          className={cn(
-            "text",
-            clicked === "backend" && "scale-150 italic text-secondary",
-          )}
-          id="backend"
-          onClick={handleClick}
-        >
-          Backend
-        </button>
-      </li>
-      <li>
-        <button
-          className={cn(
-            "text",
-            clicked === "tooling" && "scale-150 italic text-secondary ",
-          )}
-          id="tooling"
-          onClick={handleClick}
-        >
-          Tooling
-        </button>
-      </li>
-    </ul>
+    <div className="">
+      <ul ref={scope} className={"circle"}>
+        <li>
+          <button
+            className={cn(
+              "text",
+              clicked === "frontend" && "scale-150 italic text-secondary",
+            )}
+            id="frontend"
+            onClick={handleClick}
+          >
+            Frontend
+          </button>
+        </li>
+        <li>
+          <button
+            className={cn(
+              "text",
+              clicked === "backend" && "scale-150 italic text-secondary",
+            )}
+            id="backend"
+            onClick={handleClick}
+          >
+            Backend
+          </button>
+        </li>
+        <li>
+          <button
+            className={cn(
+              "text",
+              clicked === "tooling" && "scale-150 italic text-secondary ",
+            )}
+            id="tooling"
+            onClick={handleClick}
+          >
+            Tooling
+          </button>
+        </li>
+      </ul>
+    </div>
   );
 };

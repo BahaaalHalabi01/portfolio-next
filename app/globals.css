@@ -78,7 +78,7 @@
   }
 
   .circle {
-    @apply min-w-[480px] aspect-square rounded-full bg-primary/80 overflow-hidden list-none p-0 relative shadow shadow-primary;
+    @apply aspect-square rounded-full bg-primary/80 overflow-hidden list-none p-0 relative shadow shadow-primary lg:w-[480px] w-80  h-full;
   }
 
   .circle li:after {

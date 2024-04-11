@@ -22,8 +22,8 @@ const config = {
         "8xl":"84px",
         "9xl":"96px",
       },
-      height:{
-        section: 'max(100%, calc(100vh - 4rem))'
+      spacing:{
+        section: 'calc(100vh - 4rem)'
       },
       colors: {
         border: "hsl(var(--border))",

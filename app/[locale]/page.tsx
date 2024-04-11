@@ -37,7 +37,7 @@ export default function Index() {
     ],
   };
   return (
-    <main className="flex min-h-screen flex-col items-center container gap-y-4">
+    <main className="flex min-h-screen flex-col items-center container gap-y-4 lg:py-16 py-8">
       <Banner />
       <TechStack skills={skills} />
     </main>

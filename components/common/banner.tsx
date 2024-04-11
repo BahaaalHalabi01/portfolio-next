@@ -26,13 +26,16 @@ export const Banner: FC = ({}) => {
 
   return (
     <motion.section
-      className="text-start py-10 relative h-section min-h-fit"
+      className="text-start py-6 lg:py-14 relative h-section min-h-fit space-y-3"
       variants={container}
       initial="hidden"
-      viewport={{once:true}}
+      viewport={{ once: true }}
       whileInView="show"
     >
-      <div className="green-background shadow-lg shadow-primary/20" aria-description="image wrapper"></div>
+      <div
+        className="green-background shadow-lg shadow-primary/20"
+        aria-description="image wrapper"
+      ></div>
       <div className="font-bold pt-10" id="about">
         <motion.h1 className="text-9xl pb-2" {...animateItem}>
           {t("name")}
