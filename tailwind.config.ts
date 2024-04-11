@@ -23,7 +23,7 @@ const config = {
         "9xl":"96px",
       },
       height:{
-        banner:'calc(100vh - 4rem)'
+        section: 'max(100%, calc(100vh - 4rem))'
       },
       colors: {
         border: "hsl(var(--border))",
