@@ -23,9 +23,18 @@ export default function Index() {
       "Prisma,Drizzle",
       "Sql, DynamoDb,MongoDb",
       "Jest",
-      "Rust"
+      "Rust",
     ],
-    tooling: ["NeoVim", "Linux", "Git", "Turbo Repo", "Tmux", "Notion"],
+    tooling: [
+      "Docker",
+      "NeoVim",
+      "Linux",
+      "Git",
+      "Turbo Repo",
+      "Tmux",
+      "Notion",
+      "Bun",
+    ],
   };
   return (
     <main className="flex min-h-screen flex-col items-center container gap-y-4">
@@ -40,6 +49,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
+
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {

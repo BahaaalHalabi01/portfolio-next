@@ -94,7 +94,7 @@
   }
 
   .circle .text {
-    @apply -mx-1.5 absolute hover:scale-150 z-10 transition-all duration-500;
+    @apply -mx-1.5 absolute hover:scale-150 z-10 transition-transform;
   }
 
   .circle li:first-child:after {
