@@ -37,10 +37,30 @@ export function Projects(): ReactNode {
         {t("title")}
       </motion.h1>
       <div className="grid xl:grid-cols-4 gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        <ProjectCard
+          title="Trip Creator"
+          id="bedu"
+          img="/bedu/3.jpeg"
+          description={t("description.bedu")}
+        />
+        <ProjectCard
+          title="Battery Test Flow"
+          id="dox"
+          img="/dox/4.jpeg"
+          description={t("description.dox")}
+        />
+        <ProjectCard
+          title="Shop"
+          id="shop"
+          img="/shop/2.jpeg"
+          description={t("description.shop")}
+        />
+        <ProjectCard
+          title="Bedu"
+          id="bedu"
+          img="/bedu/3.jpeg"
+          description={t("description.bedu")}
+        />
       </div>
     </motion.section>
   );

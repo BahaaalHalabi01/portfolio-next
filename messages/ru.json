@@ -7,7 +7,12 @@
     "thanks": "Watching many content creators helped me advance my career and take a leap and learn some of the things above. Special thank to <prime>ThePrimeagen</prime> and <theo>Theo</theo> as these two channels helped me understand the ecosystem from completely different point of views. Give them a follow, you will not regret it!"
   },
   "Projects": {
-    "title": "My Projects"
+    "title": "My Projects",
+    "description": {
+      "bedu":"Search for restaurants you like and organise them in your calendar,then we will help you book them.",
+      "dox": "Create,organise,and vizualise tests for batteries using a flow board. ",
+      "shop": "Add products to your shop. Organise and see your sales on a daily basis."
+    }
   },
   "Home": {
     "name": "Bahaa al Halabi",

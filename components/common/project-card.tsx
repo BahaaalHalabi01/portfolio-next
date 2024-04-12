@@ -24,13 +24,20 @@ export function ProjectCard({
   id: string;
 }): ReactNode {
   return (
-    <Card>
+    <Card >
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <Image src={img} height={240} width={240} alt={title} />
+      <CardContent className="mt-auto">
+        <div className="relative h-40 rounded-md">
+          <Image
+            src={img}
+            className="w-auto rounded-md"
+            layout="fill"
+            alt={title}
+          />
+        </div>
       </CardContent>
       <CardFooter className="">
         <Link
