@@ -34,7 +34,7 @@ export function ProjectCard({
           <Image
             src={img}
             className="w-auto rounded-md"
-            layout="fill"
+            fill
             alt={title}
           />
         </div>

@@ -40,7 +40,7 @@ export default function Home(): ReactNode {
     ],
   };
   return (
-    <main className="flex min-h-screen flex-col items-start container gap-y-4 lg:py-16 py-8">
+    <main className="flex min-h-screen flex-col items-start container gap-y-4 lg:pb-24 pb-12">
       <Banner />
       <TechStack skills={skills} />
       <Projects />

@@ -27,7 +27,7 @@ export function Projects(): ReactNode {
 
   return (
     <motion.section
-      className="text-start py-6 lg:py-14 relative h-section min-h-fit space-y-3 min-w-full"
+      className="text-start py-6 lg:py-14 relative min-h-section space-y-3 min-w-full"
       variants={container}
       initial="hidden"
       viewport={{ once: true }}
@@ -36,7 +36,7 @@ export function Projects(): ReactNode {
       <motion.h1 className="text-9xl pb-2" {...animateItem}>
         {t("title")}
       </motion.h1>
-      <div className="grid xl:grid-cols-4 gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+      <div className="grid xl:grid-cols-4 gap-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 pt-8">
         <ProjectCard
           title="Trip Creator"
           id="bedu"
@@ -56,9 +56,33 @@ export function Projects(): ReactNode {
           description={t("description.shop")}
         />
         <ProjectCard
-          title="Bedu"
-          id="bedu"
-          img="/bedu/3.jpeg"
+          title="Landing Page"
+          id="landing"
+          img="/landing/3.jpeg"
+          description={t("description.bedu")}
+        />
+        <ProjectCard
+          title="Movie Picker"
+          id="movie"
+          img="/movie/1.jpeg"
+          description={t("description.bedu")}
+        />
+        <ProjectCard
+          title="Age Calculator"
+          id="calculator"
+          img="/calculator/1.jpeg"
+          description={t("description.bedu")}
+        />
+        <ProjectCard
+          title="Newsletter"
+          id="newsletter"
+          img="/subscribe/1.jpeg"
+          description={t("description.bedu")}
+        />
+        <ProjectCard
+          title="Recipe"
+          id="recipe"
+          img="/recipe/1.jpeg"
           description={t("description.bedu")}
         />
       </div>

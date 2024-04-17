@@ -70,7 +70,7 @@ export default function Layout({
               <a
                 className="border-green-600 border-2 p-2 inline-block lg:hidden float-right"
                 href="/Bahaa_al_Halabi.pdf"
-                download={"Bahaa_al_Halabi.pdf"}
+                download="Bahaa_al_Halabi.pdf"
               >
                 {t("nav.resume")}
               </a>
@@ -88,7 +88,7 @@ export default function Layout({
               ))}
 
               <Link
-                className="border-green-600 border-2 py-1 px-3 hidden lg:block hover:underline hover:text-secondary-foreground"
+                className="border-green-600 border-2 py-1 px-3 hidden lg:block hover:underline hover:text-secondary-foreground rounded-md"
                 href="/Bahaa_al_Halabi.pdf"
                 download="Bahaa_al_Halabi.pdf"
               >
@@ -115,4 +115,3 @@ export default function Layout({
 export function generateStaticParams(): { locale: string }[] {
   return locales.map((locale) => ({ locale }));
 }
-
