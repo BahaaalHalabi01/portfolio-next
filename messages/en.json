@@ -6,12 +6,25 @@
     "title": "My Tech Stack",
     "thanks": "Watching many content creators helped me advance my career and take a leap and learn some of the things above. Special thank to <prime>ThePrimeagen</prime> and <theo>Theo</theo> as these two channels helped me understand the ecosystem from completely different point of views. Give them a follow, you will not regret it!"
   },
+  "FuturePlans": {
+    "title": "Future Plans",
+    "p": "This is to be written more about,I will talk about my future plans for my career,what languages i want to learn, which projects i need to make to move forward in the current market.",
+    "p1": "Do i want to get sucked in the AI hype? Do i want to get more into mobile development?(Using Expo ofc). Should i become a <strong>blazingly fast</strong> Rust developer? Or is Go the best languatge to use?",
+    "p2": "I definatly would want to work on more impactful things, participating in a <strong>large company's</strong> development process is something i don't think i would like, but aren't complicated and <strong>meaningful</strong> things meant to be <strong>difficult</strong>?",
+    "p3": "Regardless of what field or in which language it is, i believe i will make some cool things, that many people are going to use. ",
+    "p4": "To end it with the most important thing to do.Particpate more in <strong>open-source</strong> and <strong>teaching</strong>. As i appreciate how much free-stuff there is online for me to learn from, and it is my duty to pass it down to others."
+  },
   "Projects": {
     "title": "My Projects",
     "description": {
       "bedu": "Search for restaurants you like and organise them in your calendar,and we will help you book them.",
       "dox": "Create,organise,and vizualise tests for batteries using a flow board.",
-      "shop": "Add products to your shop. Organise and see your sales on a daily basis."
+      "shop": "Add products to your shop. Organise and see your sales on a daily basis.",
+      "landing": "Landing Page implementation based on a figma design",
+      "agecalculator": "Calculate your age in a cool looking app. Frontend design practise",
+      "newsletter": "Subscribe to newsletter design. Frontend design practise",
+      "recipe": "Recipe page for your favorite dish. Frontend design practise",
+      "movie": "Search for the latest movies and get information about them"
     }
   },
   "Home": {
@@ -36,7 +49,7 @@
     "welcome": "Turning ideas into cool web applications",
     "welcome-1": "A Middle Full Stack Web Developer",
     "about": {
-      "intro": "I like types (no raw <strong>Javascript</strong> please). <strong>NextJs</strong> is the best way to build a modern-web app. <strong>Sveltekit</strong> is very interesting. I love <strong>TailwindCSS</strong>. Did i say that i use <strong>Neovim</strong> by the way.",
+      "intro": "I like types (no raw <strong>Javascript</strong> please). <strong>NextJs</strong> is the best way to build a modern-web app. <strong>Sveltekit</strong> is very interesting. I love <strong>TailwindCSS</strong>. By the way, did i say that i use <strong>Neovim</strong> .",
       "0": "I mainly use",
       "1": "to build my frontend apps, and",
       "2": "with various",

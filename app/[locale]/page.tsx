@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { TechStack } from "@/components/common/techstack";
 import { Banner } from "@/components/common/banner";
 import { Projects } from "@/components/common/projects";
+import { FuturePlans } from "@/components/common/future-plans";
 
 export default function Home(): ReactNode {
   const skills = {
@@ -40,11 +41,12 @@ export default function Home(): ReactNode {
     ],
   };
   return (
-    <main className="flex min-h-screen flex-col items-start container gap-y-4 lg:pb-24 pb-12">
+    <>
       <Banner />
       <TechStack skills={skills} />
       <Projects />
-    </main>
+      <FuturePlans/>
+    </>
   );
 }
 

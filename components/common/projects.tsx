@@ -25,6 +25,7 @@ const animateItem = { variants: item };
 export function Projects(): ReactNode {
   const t = useTranslations("Projects");
 
+  /**todo add projects to turso db/local host it on vps **/
   return (
     <motion.section
       className="text-start py-6 lg:py-14 relative min-h-section space-y-3 min-w-full"
@@ -59,31 +60,31 @@ export function Projects(): ReactNode {
           title="Landing Page"
           id="landing"
           img="/landing/3.jpeg"
-          description={t("description.bedu")}
+          description={t("description.landing")}
         />
         <ProjectCard
           title="Movie Picker"
           id="movie"
           img="/movie/1.jpeg"
-          description={t("description.bedu")}
+          description={t("description.movie")}
         />
         <ProjectCard
           title="Age Calculator"
           id="calculator"
           img="/calculator/1.jpeg"
-          description={t("description.bedu")}
+          description={t("description.agecalculator")}
         />
         <ProjectCard
           title="Newsletter"
           id="newsletter"
           img="/subscribe/1.jpeg"
-          description={t("description.bedu")}
+          description={t("description.newsletter")}
         />
         <ProjectCard
           title="Recipe"
           id="recipe"
           img="/recipe/1.jpeg"
-          description={t("description.bedu")}
+          description={t("description.recipe")}
         />
       </div>
     </motion.section>

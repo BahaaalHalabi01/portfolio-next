@@ -99,7 +99,12 @@ export default function Layout({
             <BugAnimation />
           </nav>
         </header>
-        <Providers locale={locale}>{children}</Providers>
+        <Providers locale={locale}>
+
+    <main className="flex min-h-screen flex-col items-start container gap-y-4 lg:pb-24 pb-12">
+          {children}
+          </main>
+          </Providers>
         <div className="lg:fixed lg:flex hidden top-full -translate-y-full 2xl:left-[6%] left-[4%] flex-col gap-y-8 justify-between w-full pb-24 max-w-fit">
           <Social />
         </div>

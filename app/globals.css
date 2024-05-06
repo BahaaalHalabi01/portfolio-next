@@ -74,7 +74,7 @@
   }
 
   strong {
-    @apply text-primary capitalize;
+    @apply text-primary;
   }
 
   .circle {

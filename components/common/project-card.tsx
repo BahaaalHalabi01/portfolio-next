@@ -44,7 +44,7 @@ export function ProjectCard({
           className={buttonVariants({ variant: "default" })}
           href={`/project/${id}`}
         >
-          Learn More
+      $    Learn More
         </Link>
       </CardFooter>
     </Card>

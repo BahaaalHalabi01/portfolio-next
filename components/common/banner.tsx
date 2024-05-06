@@ -1,6 +1,7 @@
 "use client";
 import { type Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { ReactNode } from "react";
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -20,7 +21,7 @@ const item: Variants = {
 
 const animateItem = { variants: item };
 
-export function Banner() {
+export function Banner():ReactNode {
   const t = useTranslations("Home");
 
   return (
@@ -34,7 +35,7 @@ export function Banner() {
       <div
         className="green-background shadow-lg shadow-primary/20"
         aria-description="image wrapper"
-      ></div>
+      />
       <div className="font-bold pt-10" id="about">
         <motion.h1 className="text-9xl pb-2" {...animateItem}>
           {t("name")}
