@@ -1,12 +1,23 @@
 "use server";
+import { eq } from "drizzle-orm";
+//
+import db from "@/db/client";
+import { projects } from "@/db/schema";
+import type { Project } from "@/db/types";
 
-import type { Project } from "../types/project";
-
-export async function getProject({ id }: { id: string }): Promise<Project> {
-  await fetch("https://google.com");
-
-  /**todo get data from database*/
-  const project = { id } as Project;
+export async function getProject({
+  id,
+}: {
+  id: string;
+}): Promise<Project | undefined> {
+  let project;
+  try {
+    project = await db.query.projects.findFirst({
+      where: eq(projects.id, id),
+    });
+  } catch (err) {
+    console.error(err);
+  }
 
   return project;
 }

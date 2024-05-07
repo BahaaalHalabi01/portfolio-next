@@ -24,19 +24,14 @@ export function ProjectCard({
   id: string;
 }): ReactNode {
   return (
-    <Card >
+    <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="mt-auto">
         <div className="relative h-40 rounded-md">
-          <Image
-            src={img}
-            className="w-auto rounded-md"
-            fill
-            alt={title}
-          />
+          <Image src={img} className="w-auto rounded-md" fill alt={title} />
         </div>
       </CardContent>
       <CardFooter className="">
@@ -44,7 +39,7 @@ export function ProjectCard({
           className={buttonVariants({ variant: "default" })}
           href={`/project/${id}`}
         >
-      $    Learn More
+          Learn More
         </Link>
       </CardFooter>
     </Card>

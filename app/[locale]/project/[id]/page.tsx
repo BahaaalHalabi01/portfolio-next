@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { redirect } from "next/navigation";
 //
 import { Button } from "@/components/ui/button";
 import { getProject } from "@/server/actions/get-project";
@@ -9,7 +10,7 @@ export default async function Project(params: {
 }): Promise<ReactNode> {
   const data = await getProject({ id: params.id });
 
-  data.id;
+  if (!data) redirect("/");
 
   return (
     <div className="pt-12 min-w-full">
