@@ -1,4 +1,6 @@
 import { format, createLogger, transports } from "winston";
+import Sentry from "winston-transport-sentry-node";
+import { dsn } from "./sentry";
 
 const { combine, timestamp, json, errors } = format;
 
@@ -10,38 +12,35 @@ const infoFilter = format((info, _) => {
   return info.level === "info" ? info : false;
 });
 
-const logger = createLogger({
+export const logger = createLogger({
   level: process.env.LOG_LEVEL ?? "info",
   format: combine(timestamp(), json()),
   transports: [
-    new transports.File({
-      filename: "combined.log",
-    }),
-    new transports.File({
-      filename: "app-error.log",
+    new Sentry({
+      sentry: { dsn },
       level: "error",
-      format: combine(
-        errorFilter(),
-        errors({ stack: true }),
-        timestamp(),
-        json(),
-      ),
     }),
-    new transports.File({
-      filename: "app-info.log",
-      level: "info",
-      format: combine(
-        infoFilter(),
-        errors({ stack: true }),
-        timestamp(),
-        json(),
-      ),
-    }),
+    // new transports.File({
+    //   filename: "app-error.log",
+    //   level: "error",
+    //   format: combine(
+    //     errorFilter(),
+    //     errors({ stack: true }),
+    //     timestamp(),
+    //     json(),
+    //   ),
+    // }),
+    // new transports.File({
+    //   filename: "app-info.log",
+    //   level: "info",
+    //   format: combine(
+    //     infoFilter(),
+    //     errors({ stack: true }),
+    //     timestamp(),
+    //     json(),
+    //   ),
+    // }),
   ],
-  exceptionHandlers: [
-    new transports.File({ filename: "exception.log" }),
-  ],
-  rejectionHandlers: [
-    new transports.File({ filename: "rejections.log" }),
-  ],
+  exceptionHandlers: [new transports.File({ filename: "exception.log" })],
+  rejectionHandlers: [new transports.File({ filename: "rejections.log" })],
 });

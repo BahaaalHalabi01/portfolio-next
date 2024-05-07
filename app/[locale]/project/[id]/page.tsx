@@ -4,11 +4,15 @@ import { redirect } from "next/navigation";
 //
 import { Button } from "@/components/ui/button";
 import { getProject } from "@/server/actions/get-project";
+import { logger } from "@/lib/logger";
 
 export default async function Project(params: {
   id: string;
 }): Promise<ReactNode> {
   const data = await getProject({ id: params.id });
+
+  logger.error('hello world')
+  throw new Error('hello world')
 
   if (!data) redirect("/");
 
