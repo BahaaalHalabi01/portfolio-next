@@ -1,16 +1,16 @@
 import { format, createLogger, transports } from "winston";
-import Sentry from "winston-transport-sentry-node";
 import { dsn } from "./sentry";
+import Sentry from './transport'
 
 const { combine, timestamp, json, errors } = format;
 
-const errorFilter = format((info, _) => {
-  return info.level === "error" ? info : false;
-});
-
-const infoFilter = format((info, _) => {
-  return info.level === "info" ? info : false;
-});
+// const errorFilter = format((info, _) => {
+//   return info.level === "error" ? info : false;
+// });
+//
+// const infoFilter = format((info, _) => {
+//   return info.level === "info" ? info : false;
+// });
 
 export const logger = createLogger({
   level: process.env.LOG_LEVEL ?? "info",
@@ -44,3 +44,7 @@ export const logger = createLogger({
   exceptionHandlers: [new transports.File({ filename: "exception.log" })],
   rejectionHandlers: [new transports.File({ filename: "rejections.log" })],
 });
+
+
+
+

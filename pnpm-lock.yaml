@@ -56,12 +56,15 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3)
+      triple-beam:
+        specifier: ^1.4.1
+        version: 1.4.1
       winston:
         specifier: ^3.13.0
         version: 3.13.0
-      winston-transport-sentry-node:
-        specifier: ^2.7.1
-        version: 2.7.1(@sentry/node@7.113.0)
+      winston-transport:
+        specifier: ^4.7.0
+        version: 4.7.0
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^14.1.4
@@ -75,6 +78,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
+      '@types/triple-beam':
+        specifier: ^1.3.5
+        version: 1.3.5
       '@vercel/style-guide':
         specifier: ^6.0.0
         version: 6.0.0(@next/eslint-plugin-next@14.2.3)(eslint@8.57.0)(typescript@5.4.5)
@@ -3466,12 +3472,6 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
-
-  winston-transport-sentry-node@2.7.1:
-    resolution: {integrity: sha512-MGaM6O/ugD4rhO1C1ffrBOUbJTIo+emtCWPko1nOFLsXbo6jkG1PKdNaYzAGkA9BhnDgxnEbDOYEDK0CArA85w==}
-    engines: {node: '>= 8.10.0'}
-    peerDependencies:
-      '@sentry/node': ^7.1.1
 
   winston-transport@4.7.0:
     resolution: {integrity: sha512-ajBj65K5I7denzer2IYW6+2bNIVqLGDHqDw3Ow8Ohh+vdW+rv4MZ6eiDvHoKhfJFZ2auyN8byXieDDJ96ViONg==}
@@ -7252,14 +7252,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  winston-transport-sentry-node@2.7.1(@sentry/node@7.113.0):
-    dependencies:
-      '@sentry/node': 7.113.0
-      triple-beam: 1.4.1
-      tslib: 2.6.2
-      winston: 3.13.0
-      winston-transport: 4.7.0
 
   winston-transport@4.7.0:
     dependencies:
