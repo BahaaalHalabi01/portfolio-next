@@ -16,6 +16,7 @@
   },
   "Projects": {
     "title": "My Projects",
+    "h2": "Below is a list i compiled of some projects/exercises i made for <strong>work</strong> or simply to <strong>exercise</strong> my already known skills",
     "description": {
       "bedu": "Search for restaurants you like and organise them in your calendar,and we will help you book them.",
       "dox": "Create,organise,and vizualise tests for batteries using a flow board.",
@@ -24,6 +25,7 @@
       "agecalculator": "Calculate your age in a cool looking app. Frontend design practise",
       "newsletter": "Subscribe to newsletter design. Frontend design practise",
       "recipe": "Recipe page for your favorite dish. Frontend design practise",
+      "interactive-comments-section": "A comment and post section where you can comment on comments.Frontend Practise",
       "movie": "Search for the latest movies and get information about them"
     }
   },

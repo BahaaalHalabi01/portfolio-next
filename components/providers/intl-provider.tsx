@@ -9,6 +9,7 @@ export function IntlProvider({
   now,
   ...rest
 }: Parameters<typeof NextIntlClientProvider>[0]):ReactNode {
+
   return (
     <NextIntlClientProvider
       // Define non-serializable props here

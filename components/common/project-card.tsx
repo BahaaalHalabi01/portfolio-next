@@ -24,7 +24,7 @@ export function ProjectCard({
   id: string;
 }): ReactNode {
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
